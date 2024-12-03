@@ -1,11 +1,11 @@
 # GLOSSAIRE
 
-- [Général](#général) (5 / 17)
-- [Front-end](#front-end) (8 / 17)
-- [UX / UI](#ux-ui) (2 / 8)
+- [Général](#général) (9 / 17)
+- [Front-end](#front-end) (9 / 17)
+- [UX / UI](#ux-ui) (3 / 8)
 - [POO] (#Programmation orienté objet POO) (8 / 17)
 - [Architecture](#architecture) (0 / 7)
-- [Modélisation / Base de données](#modélisation---base-de-données) (0 / 17)
+- [Modélisation / Base de données](#modélisation---base-de-données) (2 / 17)
 - [Symfony](#symfony) (0 / 10)
 - [Sécurité](#sécurité) (0 / 10)
 - [RGPD](#rgpd) (9 / 10)
@@ -13,9 +13,9 @@
 - [Gestion de projets / DevOps](#gestion-de-projets---devops) (0 / 16)
 - [English](#english) (6 / 8)
 
-TOTAL = 38 / 150
+TOTAL = 46 / 150
 
-## Général
+## Général 9 / 17
 1.	Quel est l’environnement à installer pour exécuter un script PHP ? Citer 2 exemples de logiciels permettant ce contexte
 Laragon, WAMP. ()
 
@@ -33,10 +33,28 @@ Laragon, WAMP. ()
     valeur nommée qui peut pas etre modifié. Var : conteneur dynamique, const: donnée fixe.
 
 6.	Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation 
+variable native a php, permettent d'acceder a toutes les informations pouvant etre transmises par le clien au serveur. sont du type tableau.
+9 superglobales
+$_GET = données envoyée via une requete http get (url) ex: $_GET['id] recupere une variable trnasmise par URL sous forme ?id=valeur
+
 7.	Quels sont les différents types (primitifs) que l’on peut associer à une variable en PHP ? Les citer et en donner des exemples (ne pas oublier le type d’une variable sans valeur)
+Boolean: true, false
+entier : nombre entiers
+string : chaine de char
+float: nombres decimaux
+objet : objet (instance d'une class)
+array: tableau
+sans valeur: $var; = NULL par defaut
+
 8.	Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
+tableaux indexé, tableaux associatif.
+//tableau multidimensionnel un tableau avec des tableau. 
+
 9.	Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ? Donner un exemple pour chacune d’entre elles
+
 10.	Quelle est la fonction PHP permettant de demander la longueur d’une chaîne de caractères ?
+strlen();
+
 11.	Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? Donner un exemple d’utilisation en PHP
 12.	Qu’est-ce qu’un cookie ? Donner un exemple d’utilisation en PHP
 13.	Quelle est la différence entre les instructions « require » et « include » en PHP
@@ -45,7 +63,11 @@ Laragon, WAMP. ()
 16.	Définir le contrôle de version ? Qu’est-ce que Git ?
 17.	Qu’est-ce qu’un CMS ? Citer au moins 2 exemples
 
-## Front-end
+
+
+
+
+## Front-end 9 / 17
 18.	Définir HTML
 (HyperText Markup Language) langage de balisage standard utilisé pour créer et structurer le contenu des pages web
 
@@ -73,6 +95,8 @@ Laragon, WAMP. ()
 conception de sites web qui permet aux pages de s'ajuster automatiquement en fonction de la taille et des caractéristiques de l'écran sur lequel elles sont affichées
 
 28.	Qu’est-ce que le templating ?
+concevoir une structure fixe, afin de l'appliquer dans d'autre fichiers, et separé des données dynamiques.
+
 29.	Qu’est-ce qu’une fonction anonyme en Javascript ?
 30.	Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
 
@@ -83,7 +107,10 @@ fonctionnalité de CSS qui permet d'appliquer des règles de style spécifiques 
 33.	Qu’est-ce que Bootstrap ? Donner d’autres exemples équivalent
 34.	Quand un formulaire HTML est créé, quelles sont les 2 méthodes qui peuvent lui être associées ? Donner la différence entre ces 2 méthodes
 
-## UX UI
+
+
+
+## UX UI 3 / 8
 35.	Quelle est la différence entre UX Design et UI Design ?
 UX concerne l'expérience globale de l'utilisateur, UI concerne la création de l'interface graphique et de l'esthétique
 
@@ -96,9 +123,11 @@ UX concerne l'expérience globale de l'utilisateur, UI concerne la création de 
 
 40.	Qu’est-ce qu’une grille de mise en page ?
 41.	Qu’est-ce que la notion d’affordance en UX Design ?
-42.	Qu’est-ce qu’un « mobile first design » ?
 
-## Programmation orientée objet (POO)
+42.	Qu’est-ce qu’un « mobile first design » ?
+    Concevoir d'abord un site web pour appareils mobiles, puis adapter la conception pour des grands ecrans.
+
+## Programmation orientée objet (POO) 8 / 17
 43.	Donner une définition de la programmation orientée objet 
     approche de conception qui utilise des objets et des classes pour organiser le code de manière structurée
 
@@ -137,7 +166,7 @@ UX concerne l'expérience globale de l'utilisateur, UI concerne la création de 
 58.	Comment appelle-t-on en français les « getters » et les « setters » ?
 59.	Qu’est-ce que la sérialisation en PHP ? 
 
-## Architecture 
+## Architecture  0 / 7
 60.	Qu’est-ce que l’architecture client / serveur ? Grâce à quel type de requête peut-on interroger le serveur. Définir l’acronyme de ce type de requête. Si on ajoute un « S » à cet acronyme, expliquer la différence
 61.	Donner la définition d’un design pattern. Citer au moins 3 exemples de design pattern
 62.	Qu’est-ce que l’architecture MVC ?
@@ -146,12 +175,16 @@ UX concerne l'expérience globale de l'utilisateur, UI concerne la création de 
 65.	Existe-t-il des variantes à l’architecture MVC ?
 66.	Qu’est-ce qu’une API ? Définir l’architecture REST
 
-## Modélisation - Base de données
+## Modélisation - Base de données 2 / 17
 67.	Qu’est-ce que la modélisation de données ? Définir la méthode Merise
+créer une représentation abstraite et organisée des données d'une organisation ou d'un système pour en comprendre la structure et les relations.
+methode de conception qui repose sur une approche structuée.
+
 68.	Quelles sont les 3 étapes principales de la méthode Merise ? 
-a.	Analyse, conception et réalisation
+a.	Analyse, conception et réalisation<<<<<<<<<<<<<<<
 b.	Planification, exécution et contrôle
 c.	Création, modification et suppression
+
 69.	Qu’est-ce qu’un modèle conceptuel de données (MCD) en Merise ?
 70.	Qu’est-ce qu’un modèle logique de données (MLD) en Merise ?
 71.	Donner la définition des mots suivants :
@@ -183,7 +216,7 @@ g.	Regrouper les résultats d'une requête SELECT en fonction d'une colonne spé
 h.	Concaténer 2 chaînes de caractères 
 83.	Comment se connecter à une base de données en PHP ? Quelle est la classe native utilisée ?
 
-## Symfony
+## Symfony 0 / 10
 84.	Qu’est-ce que Symfony ?
 85.	Sur quel langage de programmation et design pattern repose Symfony ? 
 86.	Quelle est la dernière version en date de Symfony ?
@@ -195,7 +228,7 @@ h.	Concaténer 2 chaînes de caractères
 92.	Quel est le langage de requêtage exploité au sein d’un projet Symfony ?
 93.	Quel est le composant qui garantit l’authentification et l’autorisation des utilisateurs ?
 
-## Sécurité
+## Sécurité 0 / 10
 94.	Qu’est-ce que l’injection SQL ? Comment s’en prémunir ?
 95.	Qu’est-ce que la faille XSS ? Comment s’en prémunir ?
 96.	Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
@@ -207,7 +240,7 @@ h.	Concaténer 2 chaînes de caractères
 102. Qu’est-ce que l’hameçonnage ?
 103. Définir la « validation des entrées »
 
-## RGPD
+## RGPD 9 / 10
 104. Qu’est-ce que le RGPD ?
      Règlement Général sur la Protection des Données 
 
@@ -243,7 +276,7 @@ droit a la notification en cas de violation de connées
 113. Qu’est-ce que le principe de minimisation des données selon le RGPD ?
     Demandé les informations au clients/utilisateurs nécessaires.
 
-## SEO
+## SEO 0 / 13
 114.	Qu’est-ce que le SEO ? 
 115.	Quel est l’objectif principal du SEO ?
 116.	Existe-t-il plusieurs types de référencement ? Lesquels ?
@@ -258,7 +291,7 @@ droit a la notification en cas de violation de connées
 125.	Qu'est-ce que l'optimisation des images pour le référencement ?
 126.	Qu'est-ce qu'un plan de site (sitemap) et pourquoi est-il important pour le référencement ?
 
-## Gestion de projets - DevOps
+## Gestion de projets - DevOps 0 / 16
 127.	Qu’est-ce que la gestion de projet ?	
 128.	Qu’est-ce qu’une méthode Agile de gestion de projet ? 
 129.	Expliquer la méthode MoSCoW en quelques lignes et citer ses avantages
@@ -276,7 +309,7 @@ droit a la notification en cas de violation de connées
 141.	Quelles sont les caractéristiques d'un bon test unitaire ?
 142.	Qu'est-ce qu'une assertion dans un test unitaire ?
  
-## English
+## English 6 / 8
 1)	What does JavaScript enable you to do on a website ?
 a.	Add interactive behavior and dynamic content <<<<<<<<<<<<
 b.	Define the layout and design of web pages
