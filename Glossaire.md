@@ -5,7 +5,7 @@
 - [UX / UI](#ux-ui) (3 / 8)
 - [POO] (#Programmation orienté objet POO) (8 / 17)
 - [Architecture](#architecture) (0 / 7)
-- [Modélisation / Base de données](#modélisation---base-de-données) (2 / 17)
+- [Modélisation / Base de données](#modélisation---base-de-données) (8 / 17)
 - [Symfony](#symfony) (0 / 10)
 - [Sécurité](#sécurité) (0 / 10)
 - [RGPD](#rgpd) (9 / 10)
@@ -175,7 +175,7 @@ UX concerne l'expérience globale de l'utilisateur, UI concerne la création de 
 65.	Existe-t-il des variantes à l’architecture MVC ?
 66.	Qu’est-ce qu’une API ? Définir l’architecture REST
 
-## Modélisation - Base de données 2 / 17
+## Modélisation - Base de données 8 / 17
 67.	Qu’est-ce que la modélisation de données ? Définir la méthode Merise
 créer une représentation abstraite et organisée des données d'une organisation ou d'un système pour en comprendre la structure et les relations.
 methode de conception qui repose sur une approche structuée.
@@ -186,26 +186,41 @@ b.	Planification, exécution et contrôle
 c.	Création, modification et suppression
 
 69.	Qu’est-ce qu’un modèle conceptuel de données (MCD) en Merise ?
+représentation simplifiée des données d’un système d'information. Il décrit les entités et leurs relations
+
 70.	Qu’est-ce qu’un modèle logique de données (MLD) en Merise ?
+version plus détaillée et précise du MCD. Il décrit comment les données seront organisées dans une base de données
+
 71.	Donner la définition des mots suivants :
 a.	Entité
+représente un objet du système d'information généralement une chose ou une personne dont on veut stocker des informations
 b.	Relation
+lien ou une association entre deux entités
 c.	Cardinalité
+nombre d'occurrences d'une entité pouvant être associées à une autre entité (1,1 1,n)
 d.	Clé primaire / clé étrangère
-72.	Que devient une relation de type « Many To Many » dans le modèle logique de données ?
-73.	Qu’est-ce qu’une base de données ?
-74.	Définir les notions suivantes : 
+primeaire: permet d'identifier de manière unique chaque instance de cette entité
+etrangere: fait référence à la clé primaire d'une autre table
+
+73.	Que devient une relation de type « Many To Many » dans le modèle logique de données ?
+74.	Qu’est-ce qu’une base de données ?
+données qui sont stockées, on peut les modifier et manipuler.
+
+76.	Définir les notions suivantes : 
 a.	SQL
 b.	MySQL
 c.	SGBD (donner 2 exemples de SGBD)
-75.	Dans une base de données, les données sont stockées dans des ___. Celles-ci sont constituées de lignes appelées ___ et de colonnes appelées ___
-76.	Quelle est la différence entre une base de données relationnelle et non relationnelle ?
-77.	Qu’est-ce qu’une jointure dans une base de données ? En existe-t-il plusieurs ? Si oui lesquelles ?
-78.	A quoi sert une vue dans une base de données ?
-79.	Qu’est-ce que l’intégrité référentielle dans une base de données ?
-80.	Quelles sont les fonctions d’agrégation en SQL ?
-81.	Qu’est-ce qu’un CRUD dans le contexte d’une base de données ?
-82.	Quelles sont les clauses qui permettent de :
+
+78.	Dans une base de données, les données sont stockées dans des ___. Celles-ci sont constituées de lignes appelées ___ et de colonnes appelées ___.
+tables, enregistrements, attributs
+
+79.	Quelle est la différence entre une base de données relationnelle et non relationnelle ?
+80.	Qu’est-ce qu’une jointure dans une base de données ? En existe-t-il plusieurs ? Si oui lesquelles ?
+81.	A quoi sert une vue dans une base de données ?
+82.	Qu’est-ce que l’intégrité référentielle dans une base de données ?
+83.	Quelles sont les fonctions d’agrégation en SQL ?
+84.	Qu’est-ce qu’un CRUD dans le contexte d’une base de données ?
+85.	Quelles sont les clauses qui permettent de :
 a.	Insérer un nouvel enregistrement dans une table
 b.	Modifier un enregistrement dans une table
 c.	Supprimer un enregistrement dans une table
@@ -214,7 +229,7 @@ e.	Filtrer les résultats d’une requête SQL
 f.	Trier les résultats d’une requête SELECT
 g.	Regrouper les résultats d'une requête SELECT en fonction d'une colonne spécifique
 h.	Concaténer 2 chaînes de caractères 
-83.	Comment se connecter à une base de données en PHP ? Quelle est la classe native utilisée ?
+86.	Comment se connecter à une base de données en PHP ? Quelle est la classe native utilisée ?
 
 ## Symfony 0 / 10
 84.	Qu’est-ce que Symfony ?
