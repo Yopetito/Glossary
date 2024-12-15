@@ -13,7 +13,7 @@
 - [Gestion de projets / DevOps](#gestion-de-projets---devops) (0 / 16)
 - [English](#english) (6 / 8)
 
-TOTAL = 46 / 150
+TOTAL = 54 / 150
 
 ## Général 9 / 17
 1.	Quel est l’environnement à installer pour exécuter un script PHP ? Citer 2 exemples de logiciels permettant ce contexte
