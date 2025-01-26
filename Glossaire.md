@@ -1,11 +1,11 @@
 # GLOSSAIRE
 
-- [Général](#général) (9 / 17)
-- [Front-end](#front-end) (9 / 17)
+- [Général](#général) (17 / 17)
+- [Front-end](#front-end) (17 / 17)
 - [UX / UI](#ux-ui) (3 / 8)
 - [POO] (#Programmation orienté objet POO) (8 / 17)
 - [Architecture](#architecture) (0 / 7)
-- [Modélisation / Base de données](#modélisation---base-de-données) (8 / 17)
+- [Modélisation / Base de données](#modélisation---base-de-données) (2 / 17)
 - [Symfony](#symfony) (0 / 10)
 - [Sécurité](#sécurité) (0 / 10)
 - [RGPD](#rgpd) (9 / 10)
@@ -13,9 +13,9 @@
 - [Gestion de projets / DevOps](#gestion-de-projets---devops) (0 / 16)
 - [English](#english) (6 / 8)
 
-TOTAL = 54 / 150
+TOTAL = 62 / 150
 
-## Général 9 / 17
+## Général 17 / 17
 1.	Quel est l’environnement à installer pour exécuter un script PHP ? Citer 2 exemples de logiciels permettant ce contexte
 Laragon, WAMP. ()
 
@@ -56,18 +56,40 @@ tableaux indexé, tableaux associatif.
 strlen();
 
 11.	Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? Donner un exemple d’utilisation en PHP
+Une session est un moyen de conserver des données utilisateur entre plusieurs pages d’un site web
+session_start().
+
 12.	Qu’est-ce qu’un cookie ? Donner un exemple d’utilisation en PHP
+Un cookie est un fichier stocké sur l’ordinateur de l’utilisateur par le navigateur. Il contient des données qui peuvent être utilisées pour suivre l’utilisateur ou mémoriser ses préférences sur un site web.
+
 13.	Quelle est la différence entre les instructions « require » et « include » en PHP
+Si le fichier à inclure est manquant ou contient une erreur, cela génère une erreur fatale et le script s'arrête.
+include : Si le fichier est manquant ou contient une erreur, cela génère seulement un avertissement et le script continue de s'exécuter.
+require pour les fichiers essentiels au fonctionnement du site.
+include pour les fichiers moins critiques, comme des éléments facultatifs.
+
+
 14.	Comment effectuer une redirection en PHP ?
+header() - header("Location: page.php");
+
 15.	Définir la partie « front-end » et « back-end » d’une application
+Le front-end correspond à la partie visible et interactive d’une application, celle que l’utilisateur voit et utilise
+Le back-end est la partie invisible qui gère la logique, les bases de données, les serveurs et le traitement des données.
+
+
 16.	Définir le contrôle de version ? Qu’est-ce que Git ?
+-système qui permet de suivre les modifications apportées à un projet 
+-Outil pour gérer ces modifications de manière efficace.
+
 17.	Qu’est-ce qu’un CMS ? Citer au moins 2 exemples
+-Content Management System 
+-Système de Gestion de Contenu
+plateforme qui permet de créer et gérer facilement un site web sans avoir à coder.
+WordPress : Très utilisé pour les blogs et sites vitrines.
+Shopify : Conçu pour les sites e-commerce.
 
 
-
-
-
-## Front-end 9 / 17
+## Front-end 17 / 17
 18.	Définir HTML
 (HyperText Markup Language) langage de balisage standard utilisé pour créer et structurer le contenu des pages web
 
@@ -78,7 +100,12 @@ strlen();
     langage de programmation orienté objet, utilisé principalement pour ajouter des fonctionnalités dynamiques et interactives aux pages web
 
 21.	Définir JSON. Dans quel contexte ce format est-il utilisé ? 
+format de données simple, utilisé principalement pour échanger des informations entre un client et un serveur.
+
+
 22.	Peut-on interpréter du Javascript côté serveur ? Si oui, comment ?
+JavaScript peut être exécuté côté serveur via Node.js, ce qui permet de créer des applications web complètes en JavaScript, à la fois pour le front-end et le back-end.
+
 
 23.	Qu’est-ce qu’un sélecteur CSS ?
 élément utilisé pour cibler un ou plusieurs éléments HTML sur une page web, afin d’appliquer des styles spécifiques à ces éléments
@@ -87,6 +114,8 @@ strlen();
 <a href="lien">text a afficher</a>
 
 25.	Qu’est-ce qu’une requête AJAX ?
+-Asynchronous JavaScript and XML
+permet de communiquer avec un serveur en arrière-plan sans recharger la page web.
 
 26.	Quel sélecteur CSS permet de sélectionner tous les éléments d’une classe spécifique ? D’un identifiant spécifique ?
 . pour les classe, # pour les ID
@@ -98,15 +127,29 @@ conception de sites web qui permet aux pages de s'ajuster automatiquement en fon
 concevoir une structure fixe, afin de l'appliquer dans d'autre fichiers, et separé des données dynamiques.
 
 29.	Qu’est-ce qu’une fonction anonyme en Javascript ?
+Une fonction anonyme n’a pas de nom et est souvent utilisée de manière temporaire, par exemple, pour passer des comportements dans des fonctions
+
+
 30.	Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
+push()
+let array = [1, 2, 3];
+array.push(4)
 
 31.	Qu’est-ce qu’un « media query » ?
 fonctionnalité de CSS qui permet d'appliquer des règles de style spécifiques en fonction des caractéristiques du périphérique de l'utilisateur, telles que la largeur de l'écran, la hauteur, la résolution, l'orientation
 
 32.	Qu’est-ce qu’un pseudo élément en CSS ?
-33.	Qu’est-ce que Bootstrap ? Donner d’autres exemples équivalent
-34.	Quand un formulaire HTML est créé, quelles sont les 2 méthodes qui peuvent lui être associées ? Donner la différence entre ces 2 méthodes
+mot-clé ajouté à un sélecteur CSS pour styliser une partie spécifique d’un élément, comme la première lettre, la première ligne, ou le contenu avant ou après un élément.
 
+
+33.	Qu’est-ce que Bootstrap ? Donner d’autres exemples équivalent
+framework front-end qui facilite la création de sites web responsives
+Tailwind CSS
+Bulma
+
+34.	Quand un formulaire HTML est créé, quelles sont les 2 méthodes qui peuvent lui être associées ? Donner la différence entre ces 2 méthodes
+GET : Données visibles dans l'URL, utilisées pour la récupération de données.
+POST : Données envoyées secrètement dans le corps de la requête, pour des actions comme l’envoi de formulaires.
 
 
 
@@ -175,7 +218,7 @@ UX concerne l'expérience globale de l'utilisateur, UI concerne la création de 
 65.	Existe-t-il des variantes à l’architecture MVC ?
 66.	Qu’est-ce qu’une API ? Définir l’architecture REST
 
-## Modélisation - Base de données 8 / 17
+## Modélisation - Base de données 2 / 17
 67.	Qu’est-ce que la modélisation de données ? Définir la méthode Merise
 créer une représentation abstraite et organisée des données d'une organisation ou d'un système pour en comprendre la structure et les relations.
 methode de conception qui repose sur une approche structuée.
@@ -186,41 +229,26 @@ b.	Planification, exécution et contrôle
 c.	Création, modification et suppression
 
 69.	Qu’est-ce qu’un modèle conceptuel de données (MCD) en Merise ?
-représentation simplifiée des données d’un système d'information. Il décrit les entités et leurs relations
-
 70.	Qu’est-ce qu’un modèle logique de données (MLD) en Merise ?
-version plus détaillée et précise du MCD. Il décrit comment les données seront organisées dans une base de données
-
 71.	Donner la définition des mots suivants :
 a.	Entité
-représente un objet du système d'information généralement une chose ou une personne dont on veut stocker des informations
 b.	Relation
-lien ou une association entre deux entités
 c.	Cardinalité
-nombre d'occurrences d'une entité pouvant être associées à une autre entité (1,1 1,n)
 d.	Clé primaire / clé étrangère
-primeaire: permet d'identifier de manière unique chaque instance de cette entité
-etrangere: fait référence à la clé primaire d'une autre table
-
-73.	Que devient une relation de type « Many To Many » dans le modèle logique de données ?
-74.	Qu’est-ce qu’une base de données ?
-données qui sont stockées, on peut les modifier et manipuler.
-
-76.	Définir les notions suivantes : 
+72.	Que devient une relation de type « Many To Many » dans le modèle logique de données ?
+73.	Qu’est-ce qu’une base de données ?
+74.	Définir les notions suivantes : 
 a.	SQL
 b.	MySQL
 c.	SGBD (donner 2 exemples de SGBD)
-
-78.	Dans une base de données, les données sont stockées dans des ___. Celles-ci sont constituées de lignes appelées ___ et de colonnes appelées ___.
-tables, enregistrements, attributs
-
-79.	Quelle est la différence entre une base de données relationnelle et non relationnelle ?
-80.	Qu’est-ce qu’une jointure dans une base de données ? En existe-t-il plusieurs ? Si oui lesquelles ?
-81.	A quoi sert une vue dans une base de données ?
-82.	Qu’est-ce que l’intégrité référentielle dans une base de données ?
-83.	Quelles sont les fonctions d’agrégation en SQL ?
-84.	Qu’est-ce qu’un CRUD dans le contexte d’une base de données ?
-85.	Quelles sont les clauses qui permettent de :
+75.	Dans une base de données, les données sont stockées dans des ___. Celles-ci sont constituées de lignes appelées ___ et de colonnes appelées ___
+76.	Quelle est la différence entre une base de données relationnelle et non relationnelle ?
+77.	Qu’est-ce qu’une jointure dans une base de données ? En existe-t-il plusieurs ? Si oui lesquelles ?
+78.	A quoi sert une vue dans une base de données ?
+79.	Qu’est-ce que l’intégrité référentielle dans une base de données ?
+80.	Quelles sont les fonctions d’agrégation en SQL ?
+81.	Qu’est-ce qu’un CRUD dans le contexte d’une base de données ?
+82.	Quelles sont les clauses qui permettent de :
 a.	Insérer un nouvel enregistrement dans une table
 b.	Modifier un enregistrement dans une table
 c.	Supprimer un enregistrement dans une table
@@ -229,7 +257,7 @@ e.	Filtrer les résultats d’une requête SQL
 f.	Trier les résultats d’une requête SELECT
 g.	Regrouper les résultats d'une requête SELECT en fonction d'une colonne spécifique
 h.	Concaténer 2 chaînes de caractères 
-86.	Comment se connecter à une base de données en PHP ? Quelle est la classe native utilisée ?
+83.	Comment se connecter à une base de données en PHP ? Quelle est la classe native utilisée ?
 
 ## Symfony 0 / 10
 84.	Qu’est-ce que Symfony ?
