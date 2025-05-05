@@ -175,7 +175,7 @@ UX concerne l'expérience globale de l'utilisateur, UI concerne la création de 
 45.	Qu’est-ce qu’un « mobile first design » ?
     Concevoir d'abord un site web pour appareils mobiles, puis adapter la conception pour des grands ecrans.
 
-## Programmation orientée objet (POO) 8 / 17
+## Programmation orientée objet (POO) 17 / 17
 43.	Donner une définition de la programmation orientée objet 
     approche de conception qui utilise des objets et des classes pour organiser le code de manière structurée
 
