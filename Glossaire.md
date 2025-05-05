@@ -2,8 +2,8 @@
 
 - [Général](#général) (17 / 17)
 - [Front-end](#front-end) (17 / 17)
-- [UX / UI](#ux-ui) (3 / 8)
-- [POO] (#Programmation orienté objet POO) (8 / 17)
+- [UX / UI](#ux-ui) (8 / 8)
+- [POO] (#Programmation orienté objet POO) (17 / 17)
 - [Architecture](#architecture) (0 / 7)
 - [Modélisation / Base de données](#modélisation---base-de-données) (2 / 17)
 - [Symfony](#symfony) (0 / 10)
@@ -13,7 +13,7 @@
 - [Gestion de projets / DevOps](#gestion-de-projets---devops) (0 / 16)
 - [English](#english) (6 / 8)
 
-TOTAL = 62 / 150
+TOTAL = 76 / 150
 
 ## Général 17 / 17
 1.	Quel est l’environnement à installer pour exécuter un script PHP ? Citer 2 exemples de logiciels permettant ce contexte
@@ -153,21 +153,26 @@ POST : Données envoyées secrètement dans le corps de la requête, pour des ac
 
 
 
-## UX UI 3 / 8
+## UX UI 8 / 8
 35.	Quelle est la différence entre UX Design et UI Design ?
 UX concerne l'expérience globale de l'utilisateur, UI concerne la création de l'interface graphique et de l'esthétique
 
-36.	Qu’est-ce qu’un wireframe ? 
-37.	Qu’est-ce qu’un prototype ? 
-38.	Qu’est-ce que la hiérarchie visuelle en UI Design ?
+36.	Qu’est-ce qu’un wireframe ?
+    C’est un design d’une page, qui montre où vont les éléments (textes, images, boutons)
+   	
+38.	Qu’est-ce qu’un prototype ?
+    C’est une version test d’un site ou d’une appli
+    
+40.	Qu’est-ce que la hiérarchie visuelle en UI Design ?
+    C’est la manière d’organiser ce qu’on voit pour montrer ce qui est le plus important
 
-39.	Qu’est-ce que l’accessibilité en UX Design ? 
+42.	Qu’est-ce que l’accessibilité en UX Design ? 
     concevoir des produits numériques de manière à ce qu'ils soient accessibles et utilisables par tous, y compris les personnes en situation de handicap
 
-40.	Qu’est-ce qu’une grille de mise en page ?
-41.	Qu’est-ce que la notion d’affordance en UX Design ?
+43.	Qu’est-ce qu’une grille de mise en page ?
+44.	Qu’est-ce que la notion d’affordance en UX Design ?
 
-42.	Qu’est-ce qu’un « mobile first design » ?
+45.	Qu’est-ce qu’un « mobile first design » ?
     Concevoir d'abord un site web pour appareils mobiles, puis adapter la conception pour des grands ecrans.
 
 ## Programmation orientée objet (POO) 8 / 17
@@ -200,25 +205,72 @@ UX concerne l'expérience globale de l'utilisateur, UI concerne la création de 
     Class Personne (avec attributs nom, prenom) > 2 class enfants > auteurs et réalisateurs les deux class ont pour attributs nom prenom.
 
 51.	Définir l’opérateur de résolution de portée
-52.	Définir une méthode / propriété statique
-53.	Définir le polymorphisme en POO
-54.	Définir une méthode / classe abstraite ?
-55.	Définir le chaînage de méthodes
-56.	Qu’est-ce que la méthode __toString() ? Existe-t-il d’autres méthodes « magiques »
-57.	Qu’est-ce qu’un « autoload » ?
-58.	Comment appelle-t-on en français les « getters » et les « setters » ?
-59.	Qu’est-ce que la sérialisation en PHP ? 
-
-## Architecture  0 / 7
+     :: permet d’accéder à des éléments d’une classe (comme une méthode ou une constante), sans créer d’objet.
+   	
+53.	Définir une méthode / propriété statique
+    C’est une méthode ou une propriété liée à la classe, pas à un objet. On l’utilise avec :: sans créer d’objet.
+   	
+55.	Définir le polymorphisme en POO
+    C’est le fait que plusieurs classes peuvent avoir une même méthode, mais avec un comportement différent.
+   	
+57.	Définir une méthode / classe abstraite ?
+    ne peut pas être utilisée directement. Une méthode abstraite est une méthode sans code, que les classes enfants doivent obligatoirement définir.
+   	
+59.	Définir le chaînage de méthodes
+    C’est le fait d’enchaîner plusieurs appels de méthodes sur une seule ligne
+   	
+61.	Qu’est-ce que la méthode __toString() ? Existe-t-il d’autres méthodes « magiques »
+    permet de définir ce qu’un objet renvoie s’il est utilisé comme un string.
+   	
+63.	Qu’est-ce qu’un « autoload » ?
+    C’est un système qui charge automatiquement les fichiers des classes quand on les utilise
+   	
+65.	Comment appelle-t-on en français les « getters » et les « setters » ?
+    accesseurs, mutateurs
+   	
+67.	Qu’est-ce que la sérialisation en PHP ? 
+    C’est le fait de transformer un objet en texte pour pouvoir le stocker ou le transmettre
+   	
+## Architecture  7 / 7
 60.	Qu’est-ce que l’architecture client / serveur ? Grâce à quel type de requête peut-on interroger le serveur. Définir l’acronyme de ce type de requête. Si on ajoute un « S » à cet acronyme, expliquer la différence
-61.	Donner la définition d’un design pattern. Citer au moins 3 exemples de design pattern
-62.	Qu’est-ce que l’architecture MVC ?
-63.	Quel est le rôle de chaque couche du design pattern MVC : Model, View, Controller ?
-64.	Quels sont les avantages de l’architecture MVC ?
-65.	Existe-t-il des variantes à l’architecture MVC ?
-66.	Qu’est-ce qu’une API ? Définir l’architecture REST
+    C’est un système où un client envoie une demande, et un serveur répond
+    requête HTTP (HyperText Transfer Protocol)
+   	Si on ajoute un S (HTTPS), ça devient HyperText Transfer Protocol Secure.
+    La différence : HTTPS chiffre les données pour plus de sécurité.
+    
+62.	Donner la définition d’un design pattern. Citer au moins 3 exemples de design pattern
+    Solution qu'on utilise pour bien organiser son code.
+    C’est comme une recette qu’on adapte à son projet.
+    Exemples :
+    Singleton : pour qu’il n’y ait qu’une seule instance d’un objet.
+    Factory : pour créer des objets sans dire leur type exact.
+    MVC : qui est aussi un design pattern d’architecture.
+    
+64.	Qu’est-ce que l’architecture MVC ?
+    C’est une manière d’organiser un projet en 3 parties : Model, View, Controller pour mieux séparer le code.
+   	
+65.	Quel est le rôle de chaque couche du design pattern MVC : Model, View, Controller ?
+    Model : Gère les données (lecture, écriture, règles)
+    View : Affiche les infos à l’utilisateur (interface)
+    Controller : Fait le lien entre les deux. Il reçoit les actions de l’utilisateur et décide quoi faire
 
-## Modélisation - Base de données 2 / 17
+67.	Quels sont les avantages de l’architecture MVC ?
+    Le code est mieux organisé
+    Facile à modifier ou améliorer
+    Évite de tout mélanger (données, affichage, actions)
+    Plus simple à travailler en équipe
+   	
+69.	Existe-t-il des variantes à l’architecture MVC ?
+    MVVM (Model-View-ViewModel)
+    MVP (Model-View-Presenter)
+    HMVC (Hierarchical MVC)
+
+71.	Qu’est-ce qu’une API ? Définir l’architecture REST
+    Une API, c’est une porte d’entrée qu’un logiciel donne à d’autres pour qu’ils puissent lui parler et utiliser ses fonctions.
+    L’architecture REST, c’est une façon simple de construire une API en utilisant les règles du web.
+    Par exemple, on utilise GET pour lire, POST pour ajouter, PUT pour modifier et DELETE pour supprimer
+
+## Modélisation - Base de données 17 / 17
 67.	Qu’est-ce que la modélisation de données ? Définir la méthode Merise
 créer une représentation abstraite et organisée des données d'une organisation ou d'un système pour en comprendre la structure et les relations.
 methode de conception qui repose sur une approche structuée.
@@ -229,35 +281,65 @@ b.	Planification, exécution et contrôle
 c.	Création, modification et suppression
 
 69.	Qu’est-ce qu’un modèle conceptuel de données (MCD) en Merise ?
-70.	Qu’est-ce qu’un modèle logique de données (MLD) en Merise ?
-71.	Donner la définition des mots suivants :
-a.	Entité
-b.	Relation
-c.	Cardinalité
-d.	Clé primaire / clé étrangère
-72.	Que devient une relation de type « Many To Many » dans le modèle logique de données ?
-73.	Qu’est-ce qu’une base de données ?
-74.	Définir les notions suivantes : 
-a.	SQL
-b.	MySQL
-c.	SGBD (donner 2 exemples de SGBD)
-75.	Dans une base de données, les données sont stockées dans des ___. Celles-ci sont constituées de lignes appelées ___ et de colonnes appelées ___
-76.	Quelle est la différence entre une base de données relationnelle et non relationnelle ?
-77.	Qu’est-ce qu’une jointure dans une base de données ? En existe-t-il plusieurs ? Si oui lesquelles ?
-78.	A quoi sert une vue dans une base de données ?
-79.	Qu’est-ce que l’intégrité référentielle dans une base de données ?
-80.	Quelles sont les fonctions d’agrégation en SQL ?
-81.	Qu’est-ce qu’un CRUD dans le contexte d’une base de données ?
-82.	Quelles sont les clauses qui permettent de :
-a.	Insérer un nouvel enregistrement dans une table
-b.	Modifier un enregistrement dans une table
-c.	Supprimer un enregistrement dans une table
-d.	Supprimer la base de données
-e.	Filtrer les résultats d’une requête SQL
-f.	Trier les résultats d’une requête SELECT
-g.	Regrouper les résultats d'une requête SELECT en fonction d'une colonne spécifique
-h.	Concaténer 2 chaînes de caractères 
-83.	Comment se connecter à une base de données en PHP ? Quelle est la classe native utilisée ?
+	C’est un schéma qui montre les entités ,  leurs relations, les propriétés (attributs)
+
+71.	Qu’est-ce qu’un modèle logique de données (MLD) en Merise ?
+    traduction du mcd: représente les tables, les champs, les types de données, les clés primaires et les clés étrangères.
+   	
+73.	Donner la définition des mots suivants :
+a.	Entité : Un élément important
+b.	Relation : Lien entre deux entités 
+c.	Cardinalité: Indique combien d’éléments sont liés (ex : 1 à plusieurs).
+d.	Clé primaire / clé étrangère :  Identifie un enregistrement de façon unique / Fait le lien avec une autre table.
+
+75.	Que devient une relation de type « Many To Many » dans le modèle logique de données ?
+    Elle devient une table intermédiaire avec 2 clés étrangères.
+   	
+77.	Qu’est-ce qu’une base de données ?
+    C’est un stockage de données pour pouvoir les retrouver, ajouter ou modifier facilement.
+   	
+79.	Définir les notions suivantes : 
+a.	SQL: Langage pour parler aux bases de données
+b.	MySQL: Un outil pour gérer des bases de données.
+c.	SGBD (donner 2 exemples de SGBD):  Système de Gestion de Base de Données.
+    Exemples : MySQL, PostgreSQL
+
+81.	Dans une base de données, les données sont stockées dans des ___tables. Celles-ci sont constituées de lignes appelées ___enregistrements et de colonnes appelées ___attributs/proprietés/champs ?
+    
+83.	Quelle est la différence entre une base de données relationnelle et non relationnelle ?
+    organisée en tables avec des relations (ex : MySQL).
+   	plus flexible, souvent en documents (ex : MongoDB).
+    
+85.	Qu’est-ce qu’une jointure dans une base de données ? En existe-t-il plusieurs ? Si oui lesquelles ?
+    Une jointure permet de lier des données de plusieurs tables.
+   	innerjoin, leftjoin, rightjoin
+   	
+87.	A quoi sert une vue dans une base de données ?
+    affiche un résultat personnalisé d’une requête
+   	
+89.	Qu’est-ce que l’intégrité référentielle dans une base de données ?
+    C’est une règle qui empêche les erreurs : une clé étrangère doit toujours pointer vers un enregistrement existant.
+   	
+91.	Quelles sont les fonctions d’agrégation en SQL ?
+    COUNT() : compter
+    SUM() : additionner    
+    AVG() : moyenne
+    MIN() / MAX() : plus petit / plus grand
+   	
+93.	Qu’est-ce qu’un CRUD dans le contexte d’une base de données ?
+    action qui permet de "creer, voir, modifier, supprimer" des elements de la bdd
+   	
+95.	Quelles sont les clauses qui permettent de :
+a.	Insérer un nouvel enregistrement dans une table: INSERT INTO
+b.	Modifier un enregistrement dans une table: UPDATE
+c.	Supprimer un enregistrement dans une table:  DELETE FROM
+d.	Supprimer la base de données: DROP DATABASE
+e.	Filtrer les résultats d’une requête SQL:  WHERE
+f.	Trier les résultats d’une requête SELECT: ORDER BY
+g.	Regrouper les résultats d'une requête SELECT en fonction d'une colonne spécifique: GROUP BY
+h.	Concaténer 2 chaînes de caractères : CONCAT(champ1, champ2)
+96.	Comment se connecter à une base de données en PHP ? Quelle est la classe native utilisée ?
+    avec la PDO, $pdo = new \PDO('lien de bdd")
 
 ## Symfony 0 / 10
 84.	Qu’est-ce que Symfony ?
