@@ -4,8 +4,8 @@
 - [Front-end](#front-end) (17 / 17)
 - [UX / UI](#ux-ui) (8 / 8)
 - [POO] (#Programmation orienté objet POO) (17 / 17)
-- [Architecture](#architecture) (0 / 7)
-- [Modélisation / Base de données](#modélisation---base-de-données) (2 / 17)
+- [Architecture](#architecture) (7 / 7)
+- [Modélisation / Base de données](#modélisation---base-de-données) (17 / 17)
 - [Symfony](#symfony) (0 / 10)
 - [Sécurité](#sécurité) (0 / 10)
 - [RGPD](#rgpd) (9 / 10)
@@ -13,7 +13,7 @@
 - [Gestion de projets / DevOps](#gestion-de-projets---devops) (0 / 16)
 - [English](#english) (6 / 8)
 
-TOTAL = 76 / 150
+TOTAL = 98 / 150
 
 ## Général 17 / 17
 1.	Quel est l’environnement à installer pour exécuter un script PHP ? Citer 2 exemples de logiciels permettant ce contexte
